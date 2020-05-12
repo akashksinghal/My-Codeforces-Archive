@@ -12,6 +12,9 @@
         "string_view": "cpp",
         "initializer_list": "cpp",
         "regex": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "ostream": "cpp",
+        "xtree": "cpp",
+        "iostream": "cpp"
     }
 }
