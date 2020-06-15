@@ -20,5 +20,6 @@
         "algorithm": "cpp",
         "cmath": "cpp",
         "xiosbase": "cpp"
-    }
+    },
+    "competitive-programming-helper.firstTime": false
 }
