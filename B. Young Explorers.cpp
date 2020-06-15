@@ -8,26 +8,11 @@ using namespace std;
 #define input(A,N) for(ll i=0;i<N;i++) cin>>A[i];
 void solve()
 {
-    int n ;
-    cin >>  n ;
-    bool all_odd = true , all_even = true ;
-    for(int i = 0; i< n; i++)
-    {
-        int x ;
-        cin >> x;
-        if(x&1) 
-            all_even = false ;
-        else 
-            all_odd = false ;
-    }
-    bool ok = true ;
-    if(all_odd)
-    {
-        if(n%2==0)
-            ok = false ;
-    }
-    if(all_even) ok = false ;
-    cout << (ok?"YES\n":"NO\n");
+    ll n; cin >> n;
+    vector<ll> A(n);
+    input(A,n);
+    asc(A);
+    ll haves = 0, 
 }
 int main()
 {

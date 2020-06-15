@@ -15,6 +15,10 @@
         "valarray": "cpp",
         "ostream": "cpp",
         "xtree": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "xstring": "cpp",
+        "algorithm": "cpp",
+        "cmath": "cpp",
+        "xiosbase": "cpp"
     }
 }

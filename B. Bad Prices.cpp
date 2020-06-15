@@ -8,26 +8,21 @@ using namespace std;
 #define input(A,N) for(ll i=0;i<N;i++) cin>>A[i];
 void solve()
 {
-    int n ;
-    cin >>  n ;
-    bool all_odd = true , all_even = true ;
-    for(int i = 0; i< n; i++)
-    {
-        int x ;
-        cin >> x;
-        if(x&1) 
-            all_even = false ;
-        else 
-            all_odd = false ;
+    ll n;
+    cin>>n;
+    vector<ll> A(n);
+    input(A,n);
+    vector<ll> B(n);
+    B[n-1] = A[n-1];
+    for(int i=n-2;i>=0;i--){
+        B[i] = min(B[i+1],A[i]);
     }
-    bool ok = true ;
-    if(all_odd)
-    {
-        if(n%2==0)
-            ok = false ;
+    // for(auto i:B) cout<<i<<" ";
+    int cnt = 0;
+    for(int i=0;i<n;i++){
+        if(A[i]>B[i]) cnt++;
     }
-    if(all_even) ok = false ;
-    cout << (ok?"YES\n":"NO\n");
+    cout<<cnt<<'\n';
 }
 int main()
 {

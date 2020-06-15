@@ -5,29 +5,29 @@ using namespace std;
 #define fasino ios_base::sync_with_stdio(false); cin.tie(0);
 #define asc(A) sort(A.begin(),A.end())
 #define dsc(A) sort(A.begin(),A.end(),greater<ll>())
-#define input(A,N) for(ll i=0;i<N;i++) cin>>A[i];
+#define input(A,N) for(ll i=0;i<N;i++) cin>>A[i]; 
 void solve()
 {
-    int n ;
-    cin >>  n ;
-    bool all_odd = true , all_even = true ;
-    for(int i = 0; i< n; i++)
-    {
-        int x ;
-        cin >> x;
-        if(x&1) 
-            all_even = false ;
-        else 
-            all_odd = false ;
+    ll n,k;
+    ll ans = 1;
+    cin>>n>>k;
+    if(k>=n){
+        cout<<1<<'\n';return;
     }
-    bool ok = true ;
-    if(all_odd)
-    {
-        if(n%2==0)
-            ok = false ;
+    else{
+        for(ll i=2; i*i <= n ;i++){
+            if(n%i==0){
+                if(i<=k){
+                    ans = max(ans,i);
+                }
+                ll io = n/i;
+                if(io <= k){
+                    ans = max(ans,io);
+                }
+            }
+        }
+        cout<<n/ans<<'\n';
     }
-    if(all_even) ok = false ;
-    cout << (ok?"YES\n":"NO\n");
 }
 int main()
 {

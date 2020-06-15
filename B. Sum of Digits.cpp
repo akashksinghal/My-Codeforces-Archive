@@ -8,26 +8,17 @@ using namespace std;
 #define input(A,N) for(ll i=0;i<N;i++) cin>>A[i];
 void solve()
 {
-    int n ;
-    cin >>  n ;
-    bool all_odd = true , all_even = true ;
-    for(int i = 0; i< n; i++)
-    {
-        int x ;
-        cin >> x;
-        if(x&1) 
-            all_even = false ;
-        else 
-            all_odd = false ;
+    string A;
+    cin>>A;
+    int ans = 0;
+    while(true and A.size()!=1){
+        ll sumofDigit = 0;
+        for(auto i:A) sumofDigit+=(i-'0');
+        A = to_string(sumofDigit);
+        ans++;
+        if(sumofDigit>=0 && sumofDigit<=9) break;
     }
-    bool ok = true ;
-    if(all_odd)
-    {
-        if(n%2==0)
-            ok = false ;
-    }
-    if(all_even) ok = false ;
-    cout << (ok?"YES\n":"NO\n");
+    cout<<ans;
 }
 int main()
 {
@@ -35,8 +26,8 @@ int main()
     #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin); 
     #endif
-    int testcase;
-    cin>>testcase;
+    int testcase=1;
+    // cin>>testcase;
     while(testcase--)
     {
         solve();
