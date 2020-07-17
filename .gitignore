@@ -35,3 +35,6 @@
 
 #template
 template.cpp
+
+
+*.swp

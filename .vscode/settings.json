@@ -19,7 +19,11 @@
         "xstring": "cpp",
         "algorithm": "cpp",
         "cmath": "cpp",
-        "xiosbase": "cpp"
+        "xiosbase": "cpp",
+        "random": "cpp",
+        "utility": "cpp",
+        "bitset": "cpp",
+        "xstddef": "cpp"
     },
     "competitive-programming-helper.firstTime": false
 }
