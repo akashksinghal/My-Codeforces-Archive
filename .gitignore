@@ -36,11 +36,6 @@
 #template
 template.cpp
 
-
-*.swp
-
 temp.cpp
-
-output.txt
-
-input.txt
+*.swp
+*.txt
